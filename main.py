@@ -9,7 +9,7 @@ app = Flask(__name__)
 # --- CONFIGURAÇÃO ---
 # O ID é a parte final da URL da sua pasta no navegador:
 # Ex: drive.google.com/drive/folders/1abc123456789...
-ID_PASTA_ALVO = "1waITuhNjMHuTlN_Aafwxhf9312ra8TST"
+ID_PASTA_ALVO = "1QmpmNZw-pwNCCm6SkmPMeGQIA1qOFyfk"
 
 @app.route("/", methods=["POST", "GET"])
 def verificar_e_renomear():
@@ -51,4 +51,5 @@ def verificar_e_renomear():
         return f"Erro: {str(e)}", 500
 
 if __name__ == "__main__":
+
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
